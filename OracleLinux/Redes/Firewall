@@ -1,0 +1,27 @@
+#Muestra el estatus
+firewall-cmd --state
+
+#lista todas las reglas
+firewall-cmd --list-all
+
+#agrega una regla
+firewall-cmd --zone=public --add-port=<puerto>/<protocolo> --permanent
+
+#Lista Servicios
+firewall-cmd --list-services
+
+#recarga las reglas
+firewall-cmd --reload
+
+#lista todas las zonas
+firewall-cmd --list-all-zones
+
+#define zona default
+# firewall-cmd --get-default-zone
+public
+
+#lista los puertos abiertos en el firewall
+firewall-cmd --list-ports
+
+#habilita regla por servicio
+firewall-cmd --zone=public --add-service=http

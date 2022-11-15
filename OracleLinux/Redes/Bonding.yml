@@ -1,0 +1,48 @@
+#Crea un archivo llamado ifcfg-bondN en /etc/sysconfig/network-scripts
+DEVICE="bond0"
+IPADDR=<ip bonding>
+NETMASK=<mascara>
+NETWORK=<red>
+BROADCAST=<broadcast>
+ONBOOT=yes
+BOOTPROTO=none
+USERCTL=no
+TYPE=Ethernet
+
+#Por cada interfaz del bonding
+ifcfg-interface
+DEVICE="<interface 1>"
+NAME="<nombre>"
+IPADDR=192.168.1.101
+NETMASK=255.255.255.0
+BROADCAST=192.0.2.255
+NM_CONTROLLED="yes"
+ONBOOT=yes
+USERCTL=no
+TYPE=Ethernet
+BOOTPROTO=none
+DEFROUTE=yes
+IPV4_FAILURE_FATAL=yes
+IPV6INIT=no
+PEERDNS=yes
+PEERROUTES=yes
+MASTER=bond0
+SLAVE
+
+DEVICE="<interface 2>"
+NAME="<nombre>"
+IPADDR=192.168.1.101
+NETMASK=255.255.255.0
+BROADCAST=192.0.2.255
+NM_CONTROLLED="yes"
+ONBOOT=yes
+USERCTL=no
+TYPE=Ethernet
+BOOTPROTO=none
+DEFROUTE=yes
+IPV4_FAILURE_FATAL=yes
+IPV6INIT=no
+PEERDNS=yes
+PEERROUTES=yes
+MASTER=bond0
+SLAVE

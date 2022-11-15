@@ -1,0 +1,12 @@
+network:
+  version: 2
+  renderer: networkd
+  bonds:
+      bond0:
+          dhcp4: yes
+          interfaces:
+              - <nombre interfaz1>
+              - <nombre interfaz2>
+          parameters:
+              mode: <active-backup | balance-rr | 802.3ad>
+              primary: <nombre interfaz primaria>

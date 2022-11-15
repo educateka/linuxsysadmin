@@ -1,0 +1,13 @@
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    enp3s0:
+      addresses:
+        - <ip>/<mascara formato /n>
+      nameservers:
+        search: [<dominio opcional>]
+        addresses: [<dns1>,<dns2>]
+      routes:
+        - to: <destino> | <defaultgw>
+          via: <ip>
