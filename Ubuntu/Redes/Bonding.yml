@@ -3,7 +3,7 @@ network:
   renderer: networkd
   bonds:
       bond0:
-          dhcp4: yes
+          dhcp4: no
           interfaces:
               - <nombre interfaz1>
               - <nombre interfaz2>
