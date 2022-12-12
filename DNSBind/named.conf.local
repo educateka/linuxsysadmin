@@ -1,0 +1,12 @@
+
+zone "<dominio>" {
+        type master; #DNS Principal
+        file "/etc/bind/zones/db.<dominio>";
+        allow-transfer { none; }; #No permite transferencia de zonas
+};
+
+zone "110.168.192.in-addr.arpa" {
+        type master;
+        file "/etc/bind/zones/db.<Dirección IP sin el octeto de host ejemplo 192.168.110>";
+        allow-transfer { none; };
+};

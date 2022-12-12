@@ -1,0 +1,14 @@
+;
+; BIND data file for.dev loopback interface
+;
+$TTL    604800
+@       IN      SOA     <FQDN DNS Server>. admin.<dominio>. (
+                              2         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+;
+        IN      NS      <FQDN DNS Server>.
+<FQDN DNS Server>.              IN      A       <IP Servidor o Servicio>
+<FQDN Otros servicios o servidores>.        IN      A       <IP Servidor o Servicio>

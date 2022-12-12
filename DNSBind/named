@@ -1,0 +1,3 @@
+Ubicación: /etc/default/named
+Modificación:
+OPTIONS="-u bind -4"

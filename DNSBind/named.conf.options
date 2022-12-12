@@ -1,0 +1,12 @@
+#Lista de Control de Acceso
+acl "trusted" {
+        <dirección de red>;
+};
+options {
+        directory "/var/cache/bind"; 
+        recursion yes; #Permitir consultas recursivas
+        allow-recursion { trusted; }; #Permitir consultas a miembros de acl
+        forwarders {
+                <DNS Server externo o alternativo>; #Reenviar consultas desconocidas a otro DNS 
+        };
+};
