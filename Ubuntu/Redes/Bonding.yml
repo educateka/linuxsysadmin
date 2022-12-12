@@ -1,12 +1,19 @@
 network:
-  version: 2
-  renderer: networkd
+  ethernets:
+    <nombre interfaz 1>:
+     dhcp4: no
+    <nombre interfaz 2>:
+      dhcp4: no
   bonds:
-      bond0:
-          dhcp4: no
-          interfaces:
-              - <nombre interfaz1>
-              - <nombre interfaz2>
-          parameters:
-              mode: <active-backup | balance-rr | 802.3ad>
-              primary: <nombre interfaz primaria>
+    bond0:
+      interfaces: [<nombre interfaz 1>, <nombre interfaz 2>]
+      addresses: [<dirección ip de servidor>/<cidr>]
+      routes:
+        - to: 0.0.0.0/0
+          via: <IP Default Gateway o puerta enlace>
+      parameters:
+        mode: <active-backup|round-robin>
+
+      nameservers:
+        addresses: [<ip DNS Server>]
+  version: 2
