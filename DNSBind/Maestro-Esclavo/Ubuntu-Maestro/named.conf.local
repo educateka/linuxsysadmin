@@ -1,0 +1,13 @@
+zone "<dominio>" {
+        type master;
+        file "/etc/bind/zones/db.<dominio>";
+        allow-transfer { <alias de acl o ip de dns secundario>; };
+        notify yes;
+};
+
+zone "<zona con ip reversa ejemplo 110.168.192>.in-addr.arpa" {
+        type master;
+        file "/etc/bind/zones/db.<ip zona>";
+        allow-transfer { <alias acl o ip de dns secundario>; };
+        notify yes;
+};

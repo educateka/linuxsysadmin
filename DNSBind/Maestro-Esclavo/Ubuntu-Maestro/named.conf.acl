@@ -1,0 +1,6 @@
+acl dns-secundario {
+        192.168.110.2;
+};
+acl red-cliente {
+        192.168.110.0/24;
+};

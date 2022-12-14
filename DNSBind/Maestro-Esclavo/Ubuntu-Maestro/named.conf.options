@@ -1,0 +1,7 @@
+options {
+        directory "/var/cache/bind";
+        recursion no; #Este parámetro puede ser si o no dependiendo de su configuración deseada
+        dnssec-validation no;
+
+        listen-on-v6 { none; };
+};
